@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <!-- Einbindung der CSS-Datei -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <p>Welcome to our website!</p>
+    <!-- Einbindung eines Bildes -->
+    <img src="{{ url_for('static', filename='img/Testimage.jpg') }}" alt="Logo">
+    <!-- Einbindung der JavaScript-Datei -->
+</body>
+</html>
