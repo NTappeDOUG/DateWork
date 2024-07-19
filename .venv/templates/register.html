@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Registrieren{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center" style="height: 100vh;">
+    <div class="col-lg-4 col-md-6">
+        <h2 class="my-5 text-center">Registrieren</h2>
+        <form method="POST" action="{{ url_for('Register') }}">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="username" name="username" placeholder="Benutzername" required>
+                <label for="username">Benutzername</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Passwort" required>
+                <label for="password">Passwort</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="passwordRepeat" name="passwordRepeat" placeholder="Passwort wiederholen" required>
+                <label for="password">Passwort wiederholen</label>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrieren</button>
+        </form>
+        <br>
+        <div class="text-center">
+            <span>Du hast bereits einen Account? </span>
+            <a href="{{ url_for('Login') }}">Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
